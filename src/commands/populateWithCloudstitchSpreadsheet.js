@@ -33,11 +33,7 @@ export default (context, populateAgain) => {
   else {
 
     //ask for JSON file path, passing the last location if available
-    let cOpts = Data.askForCloudstitch(
-      options[OPTIONS.LAST_CLOUDSTITCH_USERNAME],
-      options[OPTIONS.LAST_CLOUDSTITCH_APPNAME],
-      options[OPTIONS.LAST_CLOUDSTITCH_WORKSHEET]
-    )
+    let cOpts = Data.askForCloudstitch(options)
 
     if (!cOpts) return
     

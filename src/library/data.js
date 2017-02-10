@@ -52,12 +52,12 @@ export function askForJSON(path) {
  *
  * @returns {string} The URL for the JSON to download
  */
-export function askForCloudstitch(lastUsername, lastAppname, lastWorksheet) {
+export function askForCloudstitch(opts) {
 
   let alert = createAlert("Select Spreadsheet", "Cloudstitch.com wraps Google Sheets and Excel with an easy to use API. Enter your wrapper project details: ", 'icon.png')
 
   //create data options view (disable randomize if populating table)
-  let cloudstitchOptionsView = createCloudstitchOptionsView({})
+  let cloudstitchOptionsView = createCloudstitchOptionsView(opts)
   alert.addAccessoryView(cloudstitchOptionsView.view)
 
   //add bottom buttons
@@ -107,7 +107,6 @@ export function createCloudstitchOptionsView(opt) {
   //create options view
   const ViewWidth = 300, ViewHeight = 200;
   const X = 0, W = 300, LabelHeight = 23, InputHeight = 22;
-  const X = 0, W = 300, LabelHeight = 20, InputHeight = 22;
   const ExternalPadding = 6, TopPadding = 25;
   const BlockHeight = LabelHeight + InputHeight;
 
@@ -156,7 +155,6 @@ export function createCloudstitchOptionsView(opt) {
   optionsView.addSubview(
     createLabel("docs.cloudstitch.com/integrations/sketch", 12, false, NSMakeRect(X ,  ViewHeight - (HelpY+17), W, LabelHeight))
   )
-
 
   //return configured view
   return {
