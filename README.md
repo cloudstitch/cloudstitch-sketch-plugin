@@ -2,6 +2,8 @@
 
 The <a href="https://github.com/cloudstitch/cloudstitch-sketch-plugin">Cloudstitch Sketch Plugin</a> is an open source extention of the  <a href="https://github.com/preciousforever/sketch-data-populator">Sketch Data Populator</a> that lets you also use Google Spreadsheet and Microsoft Excel data in your Sketch designs.
 
+[Download](https://github.com/cloudstitch/cloudstitch-sketch-plugin/releases), unzip, and double-click  `Cloudstitch.sketchplugin` to install.
+
 ## Why this is Awesome
 
 Designers should work with _meaningful_ and _realistic_ data as early as possible in the design process for the following reasons:
